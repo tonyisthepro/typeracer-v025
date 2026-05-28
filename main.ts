@@ -11,7 +11,6 @@ function resetGame () {
     currentLetterIndex = 0
     newWord()
 }
-// LETTER SELECT LEFT
 input.onButtonPressed(Button.A, function () {
     if (!(playing)) {
         return
@@ -37,7 +36,6 @@ input.onButtonPressed(Button.AB, function () {
     inputWord = "" + inputWord + selected
     serial.writeLine("INPUT: " + inputWord)
 })
-// LETTER SELECT RIGHT
 input.onButtonPressed(Button.B, function () {
     if (!(playing)) {
         return
@@ -68,8 +66,8 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
             gameOver()
         }
     }
-})
-// NEW WORD (FIXED)
+}
+)
 function newWord () {
     targetWord = wordList[Math.randomRange(0, wordList.length - 1)]
     inputWord = ""
